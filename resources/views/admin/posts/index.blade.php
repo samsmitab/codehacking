@@ -11,6 +11,8 @@
              <th>Post_id</th>
             <th>title</th>
             <th>body</th>
+             <th>Post page</th>
+             <th>Comments</th>
             <th>categoy_id</th>
              <th>owner</th>
              <th>photo_id</th>
@@ -25,6 +27,8 @@
             <td>{{$post->id}}</td>
             <td><a href="{{route('admin.posts.edit',$post->id)}}">{{$post->title}}</a></td>
             <td>{{str_limit($post->body, 7)}}</td>
+             <td><a href="{{route('home.post',$post->id)}}">view post</a></td>
+             <td><a href="{{route('admin.comments.show',$post->id)}}">view comments</a></td>
             <td>{{$post->category ? $post->category->name : "Uncategorized"}}</td>
             <td>{{$post->user->name}}</td>
             <td><img height="50" src="{{$post->photo ? $post->photo ->file :'http://via.placeholder.com/400x400'}}" alt=""></td>
