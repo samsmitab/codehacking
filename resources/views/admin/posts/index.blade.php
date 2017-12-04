@@ -27,7 +27,7 @@
             <td>{{$post->id}}</td>
             <td><a href="{{route('admin.posts.edit',$post->id)}}">{{$post->title}}</a></td>
             <td>{{str_limit($post->body, 7)}}</td>
-             <td><a href="{{route('home.post',$post->id)}}">view post</a></td>
+             <td><a href="{{route('home.post',$post->slug)}}">view post</a></td>
              <td><a href="{{route('admin.comments.show',$post->id)}}">view comments</a></td>
             <td>{{$post->category ? $post->category->name : "Uncategorized"}}</td>
             <td>{{$post->user->name}}</td>
@@ -40,6 +40,14 @@
        @endif
       </tbody>
     </table>
+
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-5">
+
+            {{$posts->render()}}
+
+        </div>
+    </div>
 
 
 @stop
