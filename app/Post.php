@@ -54,6 +54,11 @@ class Post extends Model
 
     }
 
+    public function photoPlaceHolder(){
+
+        return "http://via.placeholder.com/350x150";
+    }
+
 
 
 }

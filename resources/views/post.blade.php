@@ -24,12 +24,12 @@
     <hr>
 
     <!-- Preview Image -->
-    <img class="img-responsive" src="{{$post->photo->file}}" alt="">
+    <img class="img-responsive" src="{{$post->photo ? $post->photo->file : $post->photoPlaceHolder()}}" alt="">
 
     <hr>
 
     <!-- Post Content -->
-   {{$post->body}}
+   <p>{!! $post->body !!}</p>
     <hr>
 
     @if(Session::has('comment_message'))
