@@ -39,11 +39,12 @@
             </thead>
             <tbody>
 
+            {{--<img src="http://laravel/codehacking/public/images/1511339000DDW_887173.jpg" alt="hi">--}}
             @foreach($photos as$photo)
                 <tr>
                     <td><input class="checkBoxes" type="checkbox" name="checkBoxArray[]" value="{{$photo->id}}"></td>
                     <td>{{$photo->id}}</td>
-                    <td><img height="50" src="{{$photo->file}}" alt="no image"></td>
+                    <td><img height="50" src="http://laravel/codehacking/public/{{$photo->file}}" alt="no image"></td>
                     <td>{{$photo->created_at ? $photo->created_at : "no date" }}</td>
                     <td>
 

@@ -13,7 +13,7 @@
 
              <div class="col-sm-3">
 
-                 <img src="{{$post->photo ? $post->photo->file : $post->photoPlaceHolder()}}" alt="" class="img-responsive">
+                 <img src="{{$post->photo ? 'http://laravel/codehacking/public/'.$post->photo->file : $post->photoPlaceHolder()}}" alt="" class="img-responsive">
 
                  </div>
 

@@ -26,12 +26,12 @@
          <tr>
             <td>{{$post->id}}</td>
             <td><a href="{{route('admin.posts.edit',$post->id)}}">{{$post->title}}</a></td>
-            <td>{{str_limit($post->body, 7)}}</td>
+            <td>{{str_limit($post->body)}}</td>
              <td><a href="{{route('home.post',$post->slug)}}">view post</a></td>
              <td><a href="{{route('admin.comments.show',$post->id)}}">view comments</a></td>
             <td>{{$post->category ? $post->category->name : "Uncategorized"}}</td>
             <td>{{$post->user->name}}</td>
-            <td><img height="50" src="{{$post->photo ? $post->photo ->file :'http://via.placeholder.com/400x400'}}" alt=""></td>
+            <td><img height="50" src="{{$post->photo ? 'http://laravel/codehacking/public/'.$post->photo ->file :'http://via.placeholder.com/400x400'}}" alt=""></td>
             <td>{{$post->created_at->diffForHumans()}}</td>
              <td>{{$post->updated_at->diffForHumans()}}</td>
 

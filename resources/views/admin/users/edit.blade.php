@@ -12,7 +12,7 @@
 
         <div class="col-sm-3">
 
-            <img src="{{$user->photo ? $user->photo->file : 'http://via.placeholder.com/400x400'}}" alt="" class="img-responsive img-rounded">
+            <img src="{{$user->photo ? 'http://laravel/codehacking/public/'.$user->photo->file : 'http://via.placeholder.com/400x400'}}" alt="" class="img-responsive img-rounded">
 
         </div>
 

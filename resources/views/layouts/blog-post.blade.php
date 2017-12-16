@@ -57,6 +57,9 @@
                 <li>
                     <a href="#">Contact</a>
                 </li>
+                <li>
+                    <a href="http://laravel/codehacking/public/admin/posts">admin</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

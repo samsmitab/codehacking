@@ -24,7 +24,7 @@
     <hr>
 
     <!-- Preview Image -->
-    <img class="img-responsive" src="{{$post->photo ? $post->photo->file : $post->photoPlaceHolder()}}" alt="">
+    <img class="img-responsive" src="{{$post->photo ? 'http://laravel/codehacking/public/'.$post->photo->file : $post->photoPlaceHolder()}}" alt="">
 
     <hr>
 
@@ -73,7 +73,7 @@
         @foreach($comments as $comment)
     <div class="media">
         <a class="pull-left" href="#">
-            <img height="64" class="media-object" src="{{$comment->photo ? $comment->photo : "no photo"}}" alt="">
+            <img height="64" class="media-object" src="{{$comment->photo ? 'http://laravel/codehacking/public/'.$comment->photo : "no photo"}}" alt="">
         </a>
         <div class="media-body">
             <h4 class="media-heading">{{$comment->author}}
@@ -91,7 +91,7 @@
                     <!-- Nested Comment -->
                 <div id="nested-comment" class=" media">
                             <a class="pull-left" href="#">
-                                <img height="64" class="media-object" src="{{$reply->photo}}" alt="">
+                                <img height="64" class="media-object" src="{{'http://laravel/codehacking/public/'.$reply->photo}}" alt="">
                             </a>
                             <div class="media-body">
                                 <h4 class="media-heading">{{$reply->author}}
